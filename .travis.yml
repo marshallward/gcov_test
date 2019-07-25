@@ -1,0 +1,9 @@
+language: fortran
+
+script:
+    - make
+    - cd build
+    - ./hello
+
+after_success:
+    - bash <(curl -s https://codecov.io/bash)
