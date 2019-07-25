@@ -1,4 +1,9 @@
-language: fortran
+language: c
+sudo: required
+
+# language: fortran does not install gfortran!!
+before_install:
+    - sudo apt-get install gfortran
 
 script:
     - make
